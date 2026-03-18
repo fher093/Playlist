@@ -1,9 +1,9 @@
 #include <iostream> 
 using namespace std; 
 
-int manin(){
+int main(){
 	
-	//Aqui el menu y las instancias de cada operacion
+	cout << "Menu" << endl;
 	 
 	return 0;
 }
