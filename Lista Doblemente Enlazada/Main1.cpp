@@ -1,16 +1,3 @@
-// main.cpp
-// Programa principal que controla el reproductor de música
-// usando una lista doblemente enlazada
-
-//Opciones del menu
-//1. Agregar cancion      -> agregarCancion() al final  O(1)
-//2. Siguiente cancion    -> avanza con puntero siguiente
-//3. Cancion anterior     -> retrocede con puntero anterior O(1)
-//4. Ver cancion actual   -> muestra el nodo actual
-//5. Mostrar playlist     -> lista completa, marca [*] actual
-//6. Buscar cancion       -> busqueda lineal O(n)
-//7. Eliminar cancion     -> elimina y reenlaza prev/next
-//8. Salir
 #include <iostream>   // entrada y salida (cout, cin)
 #include <string>     // uso de string
 #include <limits>     // limpiar buffer
@@ -162,7 +149,7 @@ int main() {
     // Se crea la lista (estructura dinámica)
     Playlist<string> pl;
 
-    // Se agregan canciones iniciales (datos de prueba)
+    // Se agregan canciones iniciales 
     pl.agregarCancion("Niño Bendecido - Jose Ordoñez");
     pl.agregarCancion("La Fila - Hakuna Group");
 
@@ -186,7 +173,7 @@ int main() {
             case 7: opEliminar(pl); break;  // eliminar
         }
 
-    } while (opcion != 8); // termina cuando el usuario elige salir
+    } while (opcion != 8); 
 
-    return 0; // fin del programa
+    return 0;
 }
