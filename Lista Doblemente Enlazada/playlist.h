@@ -75,16 +75,16 @@ void Playlist<T>::agregarCancion(T cancion) {
 template <typename T>
 void Playlist<T>::siguiente() {
     if (actual == NULL) {
-        cout << "  [!] La playlist esta vacia." << endl;
+        cout << "  La playlist esta vacia." << endl;
         return;
     }
     if (actual->siguiente == NULL) {
-        cout << "  [!] Ya estas en la ultima cancion." << endl;
-        cout << "  >> Reproduciendo: " << actual->info << endl;
+        cout << " Estas en la ultima cancion: " << endl;
+        cout << "  Reproduciendo: " << actual->info << endl;
         return;
     }
     actual = actual->siguiente;
-    cout << "  >> Reproduciendo: " << actual->info << endl;
+    cout << " Reproduciendo: " << actual->info << endl;
 }
 
 // anterior  
@@ -92,12 +92,12 @@ void Playlist<T>::siguiente() {
 template <typename T>
 void Playlist<T>::anterior() {
     if (actual == NULL) {
-        cout << "  [!] La playlist esta vacia." << endl;
+        cout << " No hay canciones en la playlist " << endl;
         return;
     }
     if (actual->anterior == NULL) {   // ya estamos en el primero
-        cout << "  [!] Ya estas en la primera cancion." << endl;
-        cout << "  << Reproduciendo: " << actual->info << endl;
+        cout << " Estas en la primera cancion." << endl;
+        cout << "  Reproduciendo: " << actual->info << endl;
         return;
     }
     actual = actual->anterior;           // salto directo 
@@ -108,10 +108,10 @@ void Playlist<T>::anterior() {
 template <typename T>
 void Playlist<T>::reproducirActual() const {
     if (actual == NULL) {
-        cout << "  [!] No hay canciones en la playlist." << endl;
+        cout << " No hay canciones en la playlist." << endl;
         return;
     }
-    cout << "  >> Reproduciendo: " << actual->info << endl;
+    cout << " Reproduciendo: " << actual->info << endl;
 }
 
 // mostrarPlaylist 
@@ -119,7 +119,7 @@ void Playlist<T>::reproducirActual() const {
 template <typename T>
 void Playlist<T>::mostrarPlaylist() const {
     if (primero == NULL) {
-        cout << "  [lista vacia]" << endl;
+        cout << " lista vacia " << endl;
         return;
     }
     Nodo<T>* nodo = primero;
