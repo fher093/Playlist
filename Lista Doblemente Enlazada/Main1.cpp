@@ -1,6 +1,3 @@
-// main.cpp
-// Programa que controla el reproductor de música
-// usando una lista doblemente enlazada
 #include <iostream>   // entrada y salida (cout, cin)
 #include <string>     // uso de string
 #include <limits>     // limpiar buffer
